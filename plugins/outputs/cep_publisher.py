@@ -3,8 +3,9 @@ import json
 
 CEP_HOSTNAME = "10.0.1.100"
 CEP_PORT = "8080"
-CEP_INSTANTCE_NAME = "ProtonOnWebServer"
-cep_url = "http://" + CEP_HOSTNAME + ":" + CEP_PORT + "/" + CEP_INSTANTCE_NAME + "/rest/events"
+CEP_INSTANCE_NAME = "ProtonOnWebServer"
+cep_url = "http://{0}:{1}/{2}/rest/events".format(CEP_HOSTNAME, CEP_PORT,
+                                                  CEP_INSTANCE_NAME)
 
 
 # Publish the events extracted from the log lines to the CEP instance
